@@ -1,0 +1,18 @@
+<h1>New Devwork</h1>
+
+
+<%= form_for :devwork, url: devworks_path do |f| %>
+  <p>
+    <%= f.label :client %><br>
+    <%= f.text_field :client %>
+  </p>
+
+  <p>
+    <%= f.label :image %><br>
+    <%= url_field(:image, :homepage) %>
+  </p>
+
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>

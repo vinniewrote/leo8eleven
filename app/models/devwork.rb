@@ -1,0 +1,2 @@
+class Devwork < ApplicationRecord
+end
