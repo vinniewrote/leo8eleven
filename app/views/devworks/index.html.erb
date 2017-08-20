@@ -1,0 +1,10 @@
+
+<h4>Past Work</h4>
+
+<% @devworks.each do |devwork| %>
+  <div class="devworkCard">
+    <div class="devworkImg">imageurl:<%= devwork.image %></div>
+    <div class="devworkTitle"><%= devwork.client %></div>
+    <div><%= link_to 'Show', devwork_path(devwork) %></div>
+  </div>
+<% end %>

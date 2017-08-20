@@ -1,16 +1,29 @@
 class DevworksController < ApplicationController
+  def index
+    @devworks = Devwork.all
+  end
   def show
     @devwork = Devwork.find(params[:id])
   end
 
   def new
+    @devwork = Devwork.new
   end
 
   def create
-    @devwork = Devwork.new(params.require(:devwork).permit(:client, :image))
+    @devwork = Devwork.new(devwork_params)
 
-    @devwork.save
-    redirect_to @devwork
+    if @devwork.save
+      redirect_to @devwork
+    else
+      render 'new'
+
+    # @devwork.save
+    # redirect_to @devwork
   end
 
+  private
+    def devwork_params
+      params.require(:devwork).permit(:client, :image)
+    end
 end
