@@ -1,0 +1,31 @@
+<%= form_for(@devwork) do |f| %>
+
+  <% if @devwork.errors.any? %>
+    <div id="error_explanation">
+      <h2>
+        <%= pluralize(@devwork.errors.count, "error") %> prohibited
+        this article from being saved:
+      </h2>
+      <ul>
+        <% @devwork.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <p>
+    <%= f.label :client %><br>
+    <%= f.text_field :client %>
+  </p>
+
+  <p>
+    <%= f.label :image %><br>
+    <%= f.text_area :image%>
+  </p>
+
+  <p>
+    <%= f.submit %>
+  </p>
+
+<% end %>
