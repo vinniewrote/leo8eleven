@@ -1,6 +1,9 @@
 <div class="devworkCard">
   <div class="devworkImg">
-    imageurl:<%= @devwork.image %>
+    <%= image_tag(@devwork.hero.url, alt: 'Image') if @devwork.hero? %>
+  </div>
+  <div class="devworkUrl">
+    <%= @devwork.url %>
   </div>
   <div class="devworkTitle">
     <%= @devwork.client %>

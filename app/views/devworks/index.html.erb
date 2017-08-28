@@ -1,14 +1,29 @@
 
 <h4>Past Work</h4>
+<div class="devworkContainer">
 
-<% @devworks.each do |devwork| %>
-  <div class="devworkCard">
-    <div class="devworkImg">imageurl:<%= devwork.image %></div>
-    <div class="devworkTitle"><%= devwork.client %></div>
-    <div><%= link_to 'Show', devwork_path(devwork) %></div>
-    <div><%= link_to 'Edit', edit_devwork_path(devwork) %></div>
-    <div><%= link_to 'Destroy', devwork_path(devwork),
-              method: :delete,
-              data: { confirm: 'Are you sure?' } %></div>
-  </div>
-<% end %>
+  <% @devworks.each do |devwork| %>
+    <div class="devworkCard">
+      <div class="devworkImg">
+        <a href="<%= devwork_path(devwork)%>">
+          <img src="<%= devwork.hero %>" alt="image">
+        </a>
+      </div>
+      <div class="devworkTitle">
+        <h3><%= devwork.client %></h3>
+        <% if devwork.url? %>
+          <a href="http://<%= devwork.url %>">Visit Site</a>
+        <% end %>
+        <% if devwork.archive_link? %>
+        <a href="<%=devwork.archive_link %>">Visit archive</a>
+        <% end %>
+        <div class="loginFeature"><%= link_to 'Edit', edit_devwork_path(devwork) %></div>
+        <div class="loginFeature"><%= link_to 'Destroy', devwork_path(devwork),
+                  method: :delete,
+                  data: { confirm: 'Are you sure?' } %>
+        </div>
+      </div>
+    </div>
+  <% end %>
+
+</div>

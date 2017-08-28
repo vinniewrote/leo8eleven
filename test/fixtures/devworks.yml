@@ -2,8 +2,10 @@
 
 one:
   client: MyString
-  image: MyText
+  url: MyText
+  hero: MyText
 
 two:
   client: MyString
-  image: MyText
+  url: MyText
+  hero: MyText

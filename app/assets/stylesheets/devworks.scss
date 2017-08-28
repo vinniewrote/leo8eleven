@@ -5,4 +5,16 @@
 .devworkCard {
   border: 1px solid #868585;
   display: inline-block;
+  overflow: hidden;
+  border-radius: 4px;
+}
+
+.devworkContainer {
+  display: flex;
+}
+.devworkTitle {
+  padding: 10px 5px;
+}
+.loginFeature {
+  display: inline-block;
 }

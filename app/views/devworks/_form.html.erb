@@ -20,8 +20,23 @@
   </p>
 
   <p>
-    <%= f.label :image %><br>
-    <%= f.text_area :image%>
+    <%= f.label(:active_site, "Site is active") %>
+    <%= f.check_box(:active_site) %>
+  </p>
+
+  <p>
+    <%= f.label :url %><br>
+    <%= f.url_field(:url) %>
+  </p>
+
+  <p>
+    <%= f.label :archive_link %><br>
+    <%= f.url_field(:archive_link) %>
+  </p>
+
+  <p>
+    <%= f.label :hero %>
+    <%= f.file_field :hero %>
   </p>
 
   <p>

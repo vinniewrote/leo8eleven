@@ -44,6 +44,6 @@ class DevworksController < ApplicationController
 
   private
     def devwork_params
-      params.require(:devwork).permit(:client, :image)
+      params.require(:devwork).permit(:client, :active_site, :url, :hero, :archive_link)
     end
 end

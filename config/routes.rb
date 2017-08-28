@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :users
   get 'portfolio/index'
   resources :devworks
   root 'portfolio#index'
