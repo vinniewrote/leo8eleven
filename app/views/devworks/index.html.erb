@@ -1,16 +1,10 @@
 <span class="logoBlock"></span><h1>Leo8eleven</h1>
 <h3>The site is currently under reconstruction.  For potential work, please <a href="mailto:vizente@leo8eleven.com">email</a> me.</h3>
 
-
 <% if user_signed_in? %>
   <%= link_to 'New work', new_devwork_path %>
 <% end %>
 
-<% if user_signed_in? %>
-   <%= link_to('logout', destroy_user_session_path, method: :delete) %>
-<% else %>
-  <%= link_to('login', new_user_session_path) %>
-<% end %>
 
 <div class="devworkContainer">
 
@@ -24,7 +18,7 @@
       <div class="devworkTitle">
         <h3><%= devwork.client %></h3>
         <% if devwork.url? %>
-          <a href="http://<%= devwork.url %>">Visit Site</a>
+          <a href="<%= devwork.url %>">Visit Site</a>
         <% end %>
         <% if devwork.archive_link? %>
         <a href="<%=devwork.archive_link %>">Visit archive</a>

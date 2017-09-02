@@ -1,5 +1,5 @@
 class DevworksController < ApplicationController
-  before_action :one_user_registered?, only: [:new, :edit, :create, :update, :destroy]
+  #before_action :one_user_registered?, only: [:new, :edit, :create, :update, :destroy]
 
   def index
     @devworks = Devwork.all
@@ -45,9 +45,9 @@ class DevworksController < ApplicationController
   protected
     def one_user_registered?
       if ((User.count == 1) & (user_signed_in?))
-        redirect_to root_path
+        redirect_to @devwork.new(devwork_params)
       elsif User.count == 1
-        redirect_to new_user_session_path
+        redirect_to devworks_path
       end
     end
 
