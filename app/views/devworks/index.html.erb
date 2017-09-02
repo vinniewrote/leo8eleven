@@ -1,5 +1,15 @@
 
 <h4>Past Work</h4>
+<% if user_signed_in? %>
+  <%= link_to 'New work', new_devwork_path %>
+<% end %>
+
+<% if user_signed_in? %>
+   <%= link_to('logout', destroy_user_session_path, method: :delete) %>
+<% else %>
+  <%= link_to('login', new_user_session_path) %>
+<% end %>
+
 <div class="devworkContainer">
 
   <% @devworks.each do |devwork| %>
@@ -17,11 +27,13 @@
         <% if devwork.archive_link? %>
         <a href="<%=devwork.archive_link %>">Visit archive</a>
         <% end %>
-        <div class="loginFeature"><%= link_to 'Edit', edit_devwork_path(devwork) %></div>
-        <div class="loginFeature"><%= link_to 'Destroy', devwork_path(devwork),
-                  method: :delete,
-                  data: { confirm: 'Are you sure?' } %>
-        </div>
+        <% if user_signed_in? %>
+          <div class="loginFeature"><%= link_to 'Edit', edit_devwork_path(devwork) %></div>
+          <div class="loginFeature"><%= link_to 'Destroy', devwork_path(devwork),
+                    method: :delete,
+                    data: { confirm: 'Are you sure?' } %>
+          </div>
+        <% end %>
       </div>
     </div>
   <% end %>

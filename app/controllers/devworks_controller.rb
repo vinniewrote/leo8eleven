@@ -1,5 +1,5 @@
 class DevworksController < ApplicationController
-  http_basic_authenticate_with name: "vinniewrote", password: "crunch80", except: [:index, :show]
+  before_action :one_user_registered?, only: [:new, :edit, :create, :update, :destroy]
 
   def index
     @devworks = Devwork.all
@@ -41,6 +41,15 @@ class DevworksController < ApplicationController
 
     redirect_to devworks_path
   end
+
+  protected
+    def one_user_registered?
+      if ((User.count == 1) & (user_signed_in?))
+        redirect_to root_path
+      elsif User.count == 1
+        redirect_to new_user_session_path
+      end
+    end
 
   private
     def devwork_params
