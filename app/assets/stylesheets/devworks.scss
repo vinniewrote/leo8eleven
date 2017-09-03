@@ -3,18 +3,42 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .devworkCard {
-  border: 1px solid #868585;
-  display: inline-block;
   overflow: hidden;
-  border-radius: 4px;
+  border-radius: 5px;
+  flex-basis: 320px;
 }
-
+.devworkImg {
+  height: 280px;
+  overflow: hidden;
+}
 .devworkContainer {
   display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
 }
 .devworkTitle {
+  background: #033F77;
   padding: 10px 5px;
+  h3 {
+    text-shadow: 5px 5px #032B5C;
+    color: #FFFFFF;
+  }
 }
 .loginFeature {
   display: inline-block;
+}
+.btn {
+  padding: 4px 8px;
+  border-radius: 5px;
+  text-decoration: none;
+  color: #033F77;
+  &.active {
+    border: 1px solid #fff;
+    background: #fff;
+  }
+  &.inactive {
+    border: 1px solid #868585;
+    background: #868585;
+  }
 }

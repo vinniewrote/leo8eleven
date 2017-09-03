@@ -18,10 +18,10 @@
       <div class="devworkTitle">
         <h3><%= devwork.client %></h3>
         <% if devwork.url? %>
-          <a href="<%= devwork.url %>">Visit Site</a>
+          <a class="btn active" href="<%= devwork.url %>">Visit Site</a>
         <% end %>
         <% if devwork.archive_link? %>
-        <a href="<%=devwork.archive_link %>">Visit archive</a>
+          <a class="btn inactive" href="<%=devwork.archive_link %>">Visit archive</a>
         <% end %>
         <% if user_signed_in? %>
           <div class="loginFeature"><%= link_to 'Edit', edit_devwork_path(devwork) %></div>
