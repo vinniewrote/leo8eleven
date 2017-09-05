@@ -3,11 +3,16 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 $article-layout-grid--tablet-down: (
-  columns: 1,
+  columns: 2,
   gutter: 2rem,
-  media: "(max-width: 768px)",
+  media: "(min-width: 768px) and (max-width: 1024px)",
 );
 
+$article-layout-grid--mobile-down: (
+  columns: 1,
+  gutter: 2rem,
+  media: "(max-width: 767px)",
+);
 
 .devworkContainer {
   @include grid-container;
@@ -16,6 +21,10 @@ $article-layout-grid--tablet-down: (
   @include grid-column(4);
 
   @include grid-media($article-layout-grid--tablet-down) {
+    @include grid-column(1);
+  }
+
+  @include grid-media($article-layout-grid--mobile-down) {
     @include grid-column(1);
   }
   overflow: hidden;
