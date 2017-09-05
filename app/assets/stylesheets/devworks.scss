@@ -2,11 +2,22 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+$article-layout-grid--tablet-down: (
+  columns: 1,
+  gutter: 2rem,
+  media: "(max-width: 768px)",
+);
+
+
 .devworkContainer {
   @include grid-container;
 }
 .devworkCard {
   @include grid-column(4);
+
+  @include grid-media($article-layout-grid--tablet-down) {
+    @include grid-column(1);
+  }
   overflow: hidden;
   border-radius: 5px;
 }
