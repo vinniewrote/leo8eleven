@@ -1,0 +1,46 @@
+/*
+Error: Invalid property: "Backtrace:" (no value).
+        on line 4 of stylesheets
+
+1: /*
+2: Errno::ENOTDIR: Not a directory @ rb_sysopen - stylesheets/scss
+3: 
+4: Backtrace:
+5: /Users/vinnieCodesPro/.rvm/gems/ruby-2.4.1/gems/sass-3.5.1/lib/sass/plugin/compiler.rb:454:in `read'
+6: /Users/vinnieCodesPro/.rvm/gems/ruby-2.4.1/gems/sass-3.5.1/lib/sass/plugin/compiler.rb:454:in `update_stylesheet'
+7: /Users/vinnieCodesPro/.rvm/gems/ruby-2.4.1/gems/sass-3.5.1/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
+8: /Users/vinnieCodesPro/.rvm/gems/ruby-2.4.1/gems/sass-3.5.1/lib/sass/plugin/compiler.rb:209:in `each'
+9: /Users/vinnieCodesPro/.rvm/gems/ruby-2.4.1/gems/sass-3.5.1/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
+
+Backtrace:
+stylesheets:4
+/Users/vinnieCodesPro/.rvm/gems/ruby-2.4.1/gems/sass-3.5.1/lib/sass/engine.rb:759:in `parse_property'
+/Users/vinnieCodesPro/.rvm/gems/ruby-2.4.1/gems/sass-3.5.1/lib/sass/engine.rb:708:in `parse_property_or_rule'
+/Users/vinnieCodesPro/.rvm/gems/ruby-2.4.1/gems/sass-3.5.1/lib/sass/engine.rb:667:in `parse_line'
+/Users/vinnieCodesPro/.rvm/gems/ruby-2.4.1/gems/sass-3.5.1/lib/sass/engine.rb:540:in `build_tree'
+/Users/vinnieCodesPro/.rvm/gems/ruby-2.4.1/gems/sass-3.5.1/lib/sass/engine.rb:559:in `block in append_children'
+/Users/vinnieCodesPro/.rvm/gems/ruby-2.4.1/gems/sass-3.5.1/lib/sass/engine.rb:558:in `each'
+/Users/vinnieCodesPro/.rvm/gems/ruby-2.4.1/gems/sass-3.5.1/lib/sass/engine.rb:558:in `append_children'
+/Users/vinnieCodesPro/.rvm/gems/ruby-2.4.1/gems/sass-3.5.1/lib/sass/engine.rb:417:in `_to_tree'
+/Users/vinnieCodesPro/.rvm/gems/ruby-2.4.1/gems/sass-3.5.1/lib/sass/engine.rb:389:in `_render_with_sourcemap'
+/Users/vinnieCodesPro/.rvm/gems/ruby-2.4.1/gems/sass-3.5.1/lib/sass/engine.rb:307:in `render_with_sourcemap'
+/Users/vinnieCodesPro/.rvm/gems/ruby-2.4.1/gems/sass-3.5.1/lib/sass/plugin/compiler.rb:462:in `update_stylesheet'
+/Users/vinnieCodesPro/.rvm/gems/ruby-2.4.1/gems/sass-3.5.1/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
+/Users/vinnieCodesPro/.rvm/gems/ruby-2.4.1/gems/sass-3.5.1/lib/sass/plugin/compiler.rb:209:in `each'
+/Users/vinnieCodesPro/.rvm/gems/ruby-2.4.1/gems/sass-3.5.1/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
+/Users/vinnieCodesPro/.rvm/gems/ruby-2.4.1/gems/sass-3.5.1/lib/sass/plugin/compiler.rb:294:in `watch'
+/Users/vinnieCodesPro/.rvm/gems/ruby-2.4.1/gems/sass-3.5.1/lib/sass/plugin.rb:109:in `method_missing'
+/Users/vinnieCodesPro/.rvm/gems/ruby-2.4.1/gems/sass-3.5.1/lib/sass/exec/sass_scss.rb:360:in `watch_or_update'
+/Users/vinnieCodesPro/.rvm/gems/ruby-2.4.1/gems/sass-3.5.1/lib/sass/exec/sass_scss.rb:51:in `process_result'
+/Users/vinnieCodesPro/.rvm/gems/ruby-2.4.1/gems/sass-3.5.1/lib/sass/exec/base.rb:52:in `parse'
+/Users/vinnieCodesPro/.rvm/gems/ruby-2.4.1/gems/sass-3.5.1/lib/sass/exec/base.rb:19:in `parse!'
+/Users/vinnieCodesPro/.rvm/gems/ruby-2.4.1/gems/sass-3.5.1/bin/sass:13:in `<top (required)>'
+/Users/vinnieCodesPro/.rvm/gems/ruby-2.4.1/bin/sass:22:in `load'
+/Users/vinnieCodesPro/.rvm/gems/ruby-2.4.1/bin/sass:22:in `<main>'
+/Users/vinnieCodesPro/.rvm/gems/ruby-2.4.1/bin/ruby_executable_hooks:15:in `eval'
+/Users/vinnieCodesPro/.rvm/gems/ruby-2.4.1/bin/ruby_executable_hooks:15:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Invalid property: \"Backtrace:\" (no value).\A         on line 4 of stylesheets\A \A 1: /*\A 2: Errno::ENOTDIR: Not a directory @ rb_sysopen - stylesheets/scss\A 3: \A 4: Backtrace:\A 5: /Users/vinnieCodesPro/.rvm/gems/ruby-2.4.1/gems/sass-3.5.1/lib/sass/plugin/compiler.rb:454:in `read'\A 6: /Users/vinnieCodesPro/.rvm/gems/ruby-2.4.1/gems/sass-3.5.1/lib/sass/plugin/compiler.rb:454:in `update_stylesheet'\A 7: /Users/vinnieCodesPro/.rvm/gems/ruby-2.4.1/gems/sass-3.5.1/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'\A 8: /Users/vinnieCodesPro/.rvm/gems/ruby-2.4.1/gems/sass-3.5.1/lib/sass/plugin/compiler.rb:209:in `each'\A 9: /Users/vinnieCodesPro/.rvm/gems/ruby-2.4.1/gems/sass-3.5.1/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'"; }

@@ -2,20 +2,19 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+.devworkContainer {
+  @include grid-container;
+}
 .devworkCard {
+  @include grid-column(4);
   overflow: hidden;
   border-radius: 5px;
-  flex-basis: 320px;
 }
 .devworkImg {
-  height: 175px;
   overflow: hidden;
-}
-.devworkContainer {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: flex-start;
+  a {
+    display: block;
+  }
 }
 .devworkTitle {
   background: #033F77;

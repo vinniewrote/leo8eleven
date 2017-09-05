@@ -12,17 +12,12 @@
  *
  *= require_self
  */
-@import 'bourbon';
+@import "bourbon/bourbon";
+@import 'neat/neat';
 @import 'base/base';
-@import 'neat';
 @import 'devworks';
 @import 'portfolio';
 
-$neat-grid: (
-  columns: 12,
-  gutter: 20px,
-);
-
 .logoBlock {
-  background-image: url('mini-logo.png');
+  background-image: url('/mini-logo.png');
 }
