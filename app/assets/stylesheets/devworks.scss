@@ -29,6 +29,7 @@ $article-layout-grid--mobile-down: (
   }
   overflow: hidden;
   border-radius: 5px;
+  margin-bottom: 1.5rem
 }
 .devworkImg {
   overflow: hidden;
@@ -59,5 +60,17 @@ $article-layout-grid--mobile-down: (
   &.inactive {
     border: 1px solid #868585;
     background: #868585;
+  }
+}
+
+@media (min-width: 768px) {
+  .devworkImg {
+    max-height: 180px;
+  }
+}
+
+@media (max-width: 767px) {
+  .devworkImg {
+    max-height: 360px;
   }
 }
