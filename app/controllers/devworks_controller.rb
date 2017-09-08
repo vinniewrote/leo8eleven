@@ -1,6 +1,5 @@
 class DevworksController < ApplicationController
-  #before_action :one_user_registered?, only: [:new, :edit, :create, :update, :destroy]
-
+  
   def index
     @devworks = Devwork.all
   end
